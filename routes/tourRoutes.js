@@ -3,11 +3,6 @@ const tourController = require('./../controllers/tourController');
 
 const router = express.Router();
 
-//Create a chackBody middleware
-//Check if body contains the name and price property
-//If not, send back 400 (bad request)
-//Add it to the post handler stack
-
 router.param('id', tourController.checkID);
 
 router
